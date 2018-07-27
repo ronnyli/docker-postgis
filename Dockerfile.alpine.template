@@ -11,8 +11,8 @@ RUN set -ex \
         openssl \
         tar \
     \
-    && wget -O postgis.tar.gz "https://github.com/postgis/postgis/archive/$POSTGIS_VERSION.tar.gz" \
-    && echo "$POSTGIS_SHA256 *postgis.tar.gz" | sha256sum -c - \
+    && wget -O postgis.tar.gz "https://download.osgeo.org/postgis/source/postgis-2.4.4.tar.gz" \
+    && echo "0663efb589210d5048d95c817e5cf29552ec8180e16d4c6ef56c94255faca8c2  postgis.tar.gz" | sha256sum -c - \
     && mkdir -p /usr/src/postgis \
     && tar \
         --extract \
